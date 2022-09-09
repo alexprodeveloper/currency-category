@@ -9,11 +9,13 @@ interface State {
     getCurrencyCode?: currencyCode;
     giveCurrencyType: CurrencyType;
     getCurrencyType: CurrencyType;
+    currencyMultiplier: number;
 }
 
 const initialState: State = {
     giveCurrencyType: CurrencyType.ALL,
     getCurrencyType: CurrencyType.ALL,
+    currencyMultiplier: 0,
 }
 
 export const appSlice = createSlice({
@@ -37,8 +39,11 @@ export const appSlice = createSlice({
         },
         setGiveCurrencyType: (state, action: PayloadAction<CurrencyType>) => {
             state.giveCurrencyType = action.payload;
-        }
+        },
+        setCurrencyMultiplier: (state, action: PayloadAction<number>) => {
+            state.currencyMultiplier = action.payload;
+        },
     },
 })
 
-export const { setGiveInputValue, setGetInputValue, setGiveCurrencyCode, setGetCurrencyCode, setGetCurrencyType, setGiveCurrencyType } = appSlice.actions
+export const { setGiveInputValue, setGetInputValue, setGiveCurrencyCode, setGetCurrencyCode, setGetCurrencyType, setGiveCurrencyType, setCurrencyMultiplier } = appSlice.actions

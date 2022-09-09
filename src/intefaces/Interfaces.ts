@@ -19,3 +19,8 @@ export enum CurrencyType {
 
 export type currencyCode = 'BTC' | 'ETH' | 'CASHUSD' | 'CASHRUB' | 'ACRUB' | 'SBERRUB' | 'TCSBRUB' | 'USDTTRC' | '';
 
+export enum CurrencyCodeForFetch {
+    RUB = 'rub',
+    USD = 'usd',
+}
+
