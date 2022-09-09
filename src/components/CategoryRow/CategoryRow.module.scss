@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.category {
+  font-family: 'Inter', 'sans-serif';
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  margin: 0;
+}
+
+.categorySelected {
+  text-decoration: underline;
+  color: tomato;
+}
