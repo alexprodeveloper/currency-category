@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
+import type {PayloadAction} from '@reduxjs/toolkit'
 import {Currency, CurrencyFilter} from "../../intefaces/Interfaces";
 import {currency, currencyFilter} from "../../data/currency";
 
@@ -16,9 +16,8 @@ const initialState: State = {
 export const currencySlice = createSlice({
     name: 'currency',
     initialState,
-    reducers: {
-    },
+    reducers: {},
 })
 
-export const { } = currencySlice.actions
+export const {} = currencySlice.actions
 

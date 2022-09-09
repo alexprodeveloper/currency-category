@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit'
+import {configureStore} from '@reduxjs/toolkit'
 import {currencySlice} from "./currency/currency";
 import {appSlice} from "./app/app";
 

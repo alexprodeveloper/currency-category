@@ -46,4 +46,4 @@ export const appSlice = createSlice({
     },
 })
 
-export const { setGiveInputValue, setGetInputValue, setGiveCurrencyCode, setGetCurrencyCode, setGetCurrencyType, setGiveCurrencyType, setCurrencyMultiplier } = appSlice.actions
+export const {setGiveInputValue, setGetInputValue, setGiveCurrencyCode, setGetCurrencyCode, setGetCurrencyType, setGiveCurrencyType, setCurrencyMultiplier} = appSlice.actions

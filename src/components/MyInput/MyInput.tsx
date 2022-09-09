@@ -9,7 +9,8 @@ import {setGetCurrencyCode, setGetInputValue, setGiveCurrencyCode, setGiveInputV
 interface MyInputProps {
     location: 'give' | 'get';
 }
-const MyInput:FC<MyInputProps> = ({ location}) => {
+
+const MyInput: FC<MyInputProps> = ({location}) => {
     const currency = useSelector((state: RootState) => state.currency.currency);
     const giveCurrencyType = useSelector((state: RootState) => state.app.giveCurrencyType);
     const currencyFilter = useSelector((state: RootState) => state.currency.currencyFilter);
@@ -104,7 +105,9 @@ const MyInput:FC<MyInputProps> = ({ location}) => {
     return (
         <div className={classes.container}>
             <div className={classes.inputContainer}>
-                <TextField id="outlined-basic" value={location === 'give' ? giveInputValue || '' : getInputValue || ''} onChange={(event) => changeCurrencyInputValue(event.target.value)} variant="outlined" label={getCurrencyName() || 'Выберите валюту'} className={classes.input} type={'number'} />
+                <TextField id="outlined-basic" value={location === 'give' ? giveInputValue || '' : getInputValue || ''}
+                           onChange={(event) => changeCurrencyInputValue(event.target.value)} variant="outlined"
+                           label={getCurrencyName() || 'Выберите валюту'} className={classes.input} type={'number'}/>
             </div>
             <FormControl className={classes.select}>
                 <InputLabel id="demo-simple-select-label">Валюта</InputLabel>
@@ -115,7 +118,9 @@ const MyInput:FC<MyInputProps> = ({ location}) => {
                     label="Валюта"
                     onChange={(value) => changeCurrencyCode(value.target?.value)}
                 >
-                    {currencyForSelect.map(c => <MenuItem disabled={c.code === 'К сожалению это пока невозможно' || c.code === 'Необходимо выбрать первую валюту'} key={c.code} value={c.code}>{c.name}</MenuItem>)}
+                    {currencyForSelect.map(c => <MenuItem
+                        disabled={c.code === 'К сожалению это пока невозможно' || c.code === 'Необходимо выбрать первую валюту'}
+                        key={c.code} value={c.code}>{c.name}</MenuItem>)}
                 </Select>
             </FormControl>
         </div>

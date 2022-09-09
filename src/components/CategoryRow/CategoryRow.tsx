@@ -8,7 +8,8 @@ import {RootState} from "../../redux/store";
 interface CategoryRowProps {
     location: 'give' | 'get';
 }
-const CategoryRow:FC<CategoryRowProps> = ({location}) => {
+
+const CategoryRow: FC<CategoryRowProps> = ({location}) => {
     const dispatch = useDispatch();
     const giveCurrencyType = useSelector((state: RootState) => state.app.giveCurrencyType);
     const getCurrencyType = useSelector((state: RootState) => state.app.getCurrencyType);
@@ -28,11 +29,16 @@ const CategoryRow:FC<CategoryRowProps> = ({location}) => {
     }
     return (
         <div className={classes.container}>
-            <p className={`${classes.category} ${isOptionSelected(CurrencyType.ALL) && classes.categorySelected}`} onClick={() => changeCurrencyType(CurrencyType.ALL)}>{CurrencyType.ALL}</p>
-            <p className={`${classes.category} ${isOptionSelected(CurrencyType.CRYPTOCURRENCY) && classes.categorySelected}`} onClick={() => changeCurrencyType(CurrencyType.CRYPTOCURRENCY)}>{CurrencyType.CRYPTOCURRENCY}</p>
-            <p className={`${classes.category} ${isOptionSelected(CurrencyType.CASH) && classes.categorySelected}`} onClick={() => changeCurrencyType(CurrencyType.CASH)}>{CurrencyType.CASH}</p>
-            <p className={`${classes.category} ${isOptionSelected(CurrencyType.RUS_BANKS) && classes.categorySelected}`} onClick={() => changeCurrencyType(CurrencyType.RUS_BANKS)}>{CurrencyType.RUS_BANKS}</p>
-            <p className={`${classes.category} ${isOptionSelected(CurrencyType.UAH_BANKS) && classes.categorySelected}`} onClick={() => changeCurrencyType(CurrencyType.UAH_BANKS)}>{CurrencyType.UAH_BANKS}</p>
+            <p className={`${classes.category} ${isOptionSelected(CurrencyType.ALL) && classes.categorySelected}`}
+               onClick={() => changeCurrencyType(CurrencyType.ALL)}>{CurrencyType.ALL}</p>
+            <p className={`${classes.category} ${isOptionSelected(CurrencyType.CRYPTOCURRENCY) && classes.categorySelected}`}
+               onClick={() => changeCurrencyType(CurrencyType.CRYPTOCURRENCY)}>{CurrencyType.CRYPTOCURRENCY}</p>
+            <p className={`${classes.category} ${isOptionSelected(CurrencyType.CASH) && classes.categorySelected}`}
+               onClick={() => changeCurrencyType(CurrencyType.CASH)}>{CurrencyType.CASH}</p>
+            <p className={`${classes.category} ${isOptionSelected(CurrencyType.RUS_BANKS) && classes.categorySelected}`}
+               onClick={() => changeCurrencyType(CurrencyType.RUS_BANKS)}>{CurrencyType.RUS_BANKS}</p>
+            <p className={`${classes.category} ${isOptionSelected(CurrencyType.UAH_BANKS) && classes.categorySelected}`}
+               onClick={() => changeCurrencyType(CurrencyType.UAH_BANKS)}>{CurrencyType.UAH_BANKS}</p>
         </div>
     );
 };

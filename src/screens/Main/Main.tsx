@@ -11,7 +11,8 @@ import CurrencyService from "../../services/CurrencyService";
 interface MainProps {
 
 }
-const Main:FC<MainProps> = ({}) => {
+
+const Main: FC<MainProps> = ({}) => {
     const giveCurrencyCode = useSelector((state: RootState) => state.app.giveCurrencyCode);
     const getCurrencyCode = useSelector((state: RootState) => state.app.getCurrencyCode);
     const giveInputValue = useSelector((state: RootState) => state.app.giveInputValue);
@@ -66,11 +67,11 @@ const Main:FC<MainProps> = ({}) => {
         <div className={classes.container}>
             <main className={classes.currencyContainer}>
                 <p className={classes.heading}>Вы отдаете</p>
-                <CategoryRow location={'give'} key={'giveCategoryRow'} />
-                <MyInput location={'give'} />
+                <CategoryRow location={'give'} key={'giveCategoryRow'}/>
+                <MyInput location={'give'}/>
                 <p className={`${classes.heading} ${classes.offset}`}>Вы получаете</p>
-                <CategoryRow location={'get'} key={'getCategoryRow'} />
-                <MyInput location={'get'} />
+                <CategoryRow location={'get'} key={'getCategoryRow'}/>
+                <MyInput location={'get'}/>
             </main>
         </div>
     );
